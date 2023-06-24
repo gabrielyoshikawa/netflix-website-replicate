@@ -71,7 +71,7 @@
     }
 
     .ttl p {
-        font-size: 2rem;
+        font-size: 3rem;
         color: white;
         font-weight: 500;
         font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;

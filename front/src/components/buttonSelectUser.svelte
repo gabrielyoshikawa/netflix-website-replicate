@@ -9,7 +9,7 @@
 <style>
     button {
         min-width: 150px;
-        width: 25%;
+        width: 27%;
         height: 50%;
         border: gray 1px solid;
         color: gray;
@@ -27,7 +27,7 @@
 
     button p {
         font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 600;
     }
 </style>

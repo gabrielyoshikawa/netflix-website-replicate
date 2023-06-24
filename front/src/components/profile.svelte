@@ -5,7 +5,9 @@
 
 <div class="card">
     <div class="cardImage">
-        <img src="{userImage}" alt="">
+        <a href="/#/home">
+            <img src="{userImage}" alt="">
+        </a>
     </div>
 
     <div class="cardUserName">
@@ -30,6 +32,14 @@
         align-items: center;
     }
 
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .cardUserName {
         width: 100%;
         height: 20%;
@@ -39,7 +49,7 @@
     }
 
     .cardUserName p {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
         color: gray;
         display: flex;
@@ -47,7 +57,7 @@
 
     .cardImage img {
         max-width: 100%;
-        max-height: 70%;
+        max-height: 85%;
         border-radius: 3%;
     }
 
