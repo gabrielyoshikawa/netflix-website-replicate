@@ -9,7 +9,14 @@
         text-decoration: none;
         color: white;
         font-size: 0.9rem;
-        font-weight: 400;
         font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        margin-left: 0.5em;
+        margin-right: 1.2em;
+        transition: color 0.5s;
     }
+
+    a:hover {
+        color: rgb(216, 216, 216);
+    }
+
 </style>

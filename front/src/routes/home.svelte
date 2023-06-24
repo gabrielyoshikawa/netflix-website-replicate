@@ -14,7 +14,6 @@
     .content {
         max-width: 100vw;
         min-height: fit-content;
-        background-color: green;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;

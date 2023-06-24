@@ -10,23 +10,29 @@
         { categories: "Browse by Languages" },
     ];
 
-    const navbar = document.querySelector(".navbar");
-    window.onscroll = () => {
-        console.log(window.scrollY)
-        if (window.scrollY > 10) {
-            navbar.classList.add("nav-active");
-        } else {
-            navbar.classList.remove("nav-active");
-        }
-    };
+    function changeNavbarColor() {
+        var navbar = document.getElementById("navbar");
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollPosition > 10) navbar.style.backgroundColor = "black";
+        else navbar.style.backgroundColor = "rgba(0, 0, 0, 0.24)";
+
+    }
+
+    // Attach the function to the 'scroll' event
+    window.addEventListener("scroll", changeNavbarColor);
 </script>
 
-<nav class="navbar">
+<nav class="navbar" id="navbar">
     <div class="categoriesSpace">
-        <img src="src/assets/netflix-logo.png" alt="Netflix logo" />
-        {#each categoriesOptions as categoryOptions}
-            <NavbarCategories categories={categoryOptions.categories} />
-        {/each}
+        <a href="/">
+            <img src="src/assets/netflix-logo.png" alt="Netflix logo" />
+        </a>
+        <div class="categoriesResponsiveBox">
+            {#each categoriesOptions as categoryOptions}
+                <NavbarCategories categories={categoryOptions.categories} />
+            {/each}
+        </div>
     </div>
     <div class="iconsSpace">
         <i class="fas fa-search" />
@@ -40,49 +46,50 @@
     nav {
         width: 100%;
         height: 10%;
-        background-color: red;
+        max-height: 70px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         position: fixed;
         top: 0;
-    }
-
-    /* .navbar {
-        width: 100%;
-        position: fixed;
-        transition: 0.3s ease-in-out;
-    } */
-
-    .nav-active {
-        background-color: #fff;
-        box-shadow: 5px -1px 12px -5px grey;
+        z-index: 1;
+        transition: 1.5s;
+        background-color: rgba(0, 0, 0, 0.24);
     }
 
     .categoriesSpace {
-        width: 55%;
-        background-color: lightpink;
+        width: 70%;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    .categoriesSpace img {
+    .categoriesSpace a {
         width: 15%;
         height: 100%;
+        display: flex;
+    }
+
+    .categoriesResponsiveBox {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
     }
 
     .iconsSpace {
-        width: 39%;
-        background-color: lightblue;
+        width: 20%;
         display: flex;
         align-items: center;
         justify-content: end;
     }
 
     .iconsSpace img {
-        width: 7%;
-        height: 55%;
-        margin-right: 0.7em;
+        min-width: 35px;
+        max-width: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        margin-right: 1em;
         border-radius: 10%;
     }
 

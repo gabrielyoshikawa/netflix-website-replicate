@@ -8,9 +8,8 @@
 
 <style>
     video {
-        margin-top: 10vh;   /* Avoid Navbar Overlay */
         object-fit: cover;
         min-width: 100vw;
-        max-height: 82vh;
+        max-height: 92vh;
     }
 </style>
