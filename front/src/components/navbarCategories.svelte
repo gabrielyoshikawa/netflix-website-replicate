@@ -2,7 +2,7 @@
     export let categories;
 </script>
 
-<a href="http://localhost:5173/#/home">{categories}</a>
+<a href="http://localhost:3030/#/home">{categories}</a>
 
 <style>
     a {
@@ -11,7 +11,7 @@
         font-size: 0.9rem;
         font-family: Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
         margin-left: 0.5em;
-        margin-right: 1.2em;
+        margin-right: 1em;
         transition: color 0.5s;
     }
 

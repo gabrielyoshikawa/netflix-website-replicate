@@ -11,15 +11,14 @@
     ];
 
     function changeNavbarColor() {
-        var navbar = document.getElementById("navbar");
-        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        let navbar = document.getElementById("navbar");
+        let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scrollPosition > 10) navbar.style.backgroundColor = "black";
         else navbar.style.backgroundColor = "rgba(0, 0, 0, 0.24)";
 
     }
 
-    // Attach the function to the 'scroll' event
     window.addEventListener("scroll", changeNavbarColor);
 </script>
 
@@ -45,10 +44,10 @@
 <style>
     nav {
         width: 100%;
-        height: 10%;
+        height: 9%;
         max-height: 70px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         position: fixed;
         top: 0;
         z-index: 1;
